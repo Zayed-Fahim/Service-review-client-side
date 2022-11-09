@@ -12,13 +12,13 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer class="text-center mx-auto bg-gray-900 text-white">
-        <div class="px-6 pt-6">
-          <div class="flex justify-center mb-6">
+      <footer className="text-center mx-auto bg-gray-900 text-white">
+        <div className="px-6 pt-6">
+          <div className="flex justify-center mb-6">
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsFacebook className="w-8 h-8 p-[1px]"></BsFacebook>
             </Link>
@@ -26,7 +26,7 @@ const Footer = () => {
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsTwitter className="w-7 h-7 p-[1px] pt-[3px] ml-[2px]"></BsTwitter>
             </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsGoogle className="w-7 h-7 p-[1px] mt-[2px] ml-[2px]"></BsGoogle>
             </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsInstagram className="w-6 h-6 p-[1px] mt-[4px] ml-[4px]"></BsInstagram>
             </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsLinkedin className="w-6 h-5 p-[1px] mt-[5px] ml-[4px]"></BsLinkedin>
             </Link>
@@ -58,24 +58,24 @@ const Footer = () => {
             <Link
               href="#!"
               type="button"
-              class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <BsGithub className="w-6 h-6 p-[1px] mt-[4px] ml-[4px]"></BsGithub>
             </Link>
           </div>
           <div>
             <form action="">
-              <div class="grid md:grid-cols-3 gird-cols-1 gap-4 justify-center items-center">
-                <div class="md:ml-auto md:mb-6">
-                  <p class="">
+              <div className="grid md:grid-cols-3 gird-cols-1 gap-4 justify-center items-center">
+                <div className="md:ml-auto md:mb-6">
+                  <p className="">
                     <strong>Sign up for more offers</strong>
                   </p>
                 </div>
 
-                <div class="md:mb-6">
+                <div className="md:mb-6">
                   <input
                     type="text"
-                    class="
+                    className="
                 form-control
                 block
                 w-full
@@ -96,10 +96,10 @@ const Footer = () => {
                     placeholder="Email address"
                   />
                 </div>
-                <div class="md:mr-auto mb-6">
+                <div className="md:mr-auto mb-6">
                   <button
                     type="submit"
-                    class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                    className="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
                   >
                     Subscribe
                   </button>
@@ -108,7 +108,7 @@ const Footer = () => {
             </form>
           </div>
 
-          <div class="mb-6 container mx-auto">
+          <div className="mb-6 container mx-auto">
             <p>
               Are you hungry? Did you have a long and stressful day? Interested
               in getting a cheesy pizza delivered to your office or looking to
@@ -121,57 +121,57 @@ const Footer = () => {
             </p>
           </div>
 
-          <div class="grid lg:grid-cols-3 md:grid-cols-2 mx-auto container">
-            <div class="mb-6">
-              <h5 class="uppercase font-bold mb-2.5">Services</h5>
-              <ul class="list-none mb-0">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 mx-auto container">
+            <div className="mb-6">
+              <h5 className="uppercase font-bold mb-2.5">Services</h5>
+              <ul className="list-none mb-0">
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Why DELIVERY dot com
                   </Link>
                 </li>
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     What I deliver
                   </Link>
                 </li>
               </ul>
             </div>
-            <div class="mb-6">
-              <h5 class="uppercase font-bold mb-2.5">About</h5>
-              <ul class="list-none mb-0">
+            <div className="mb-6">
+              <h5 className="uppercase font-bold mb-2.5">About</h5>
+              <ul className="list-none mb-0">
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Home
                   </Link>
                 </li>
               </ul>
             </div>
-            <div class="mb-6">
-              <h5 class="uppercase font-bold mb-2.5">Support</h5>
-              <ul class="list-none mb-0">
+            <div className="mb-6">
+              <h5 className="uppercase font-bold mb-2.5">Support</h5>
+              <ul className="list-none mb-0">
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Help Center
                   </Link>
                 </li>
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Terms and conditions
                   </Link>
                 </li>
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Privacy policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#!" class="text-white">
+                  <Link href="#!" className="text-white">
                     Refund Account Terms & Conditions
                   </Link>
                 </li>
@@ -180,11 +180,11 @@ const Footer = () => {
           </div>
         </div>
         <div
-          class="text-center p-4"
+          className="text-center p-4"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
           © 2022 Copyright:
-          <Link class="text-white" to="/">
+          <Link className="text-white" to="/">
             {" "}
             DELIVERY dot com
           </Link>

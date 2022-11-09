@@ -48,22 +48,22 @@ const Header = () => {
             );
           })}
           <div className="inline-block">
-            <span class="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">
+            <span className="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">
               0
             </span>
             <ShoppingCartIcon className="w-6"></ShoppingCartIcon>
           </div>
         </nav>
-        <div class="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center min-[0px]:hidden max-[767px]:hidden min-[768px]:inline-block">
           <button
             type="button"
-            class="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+            className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
           >
             Sign In
           </button>
           <button
             type="button"
-            class="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+            className="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
           >
             Sign Up
           </button>
@@ -107,16 +107,16 @@ const Header = () => {
                     ))}
                   </nav>
                 </div>
-                <div class="flex flex-col space-y-4 justify-center">
+                <div className="flex flex-col space-y-4 justify-center">
                   <button
                     type="button"
-                    class="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+                    className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
                   >
                     Sign In
                   </button>
                   <button
                     type="button"
-                    class="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+                    className="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
                   >
                     Sign Up
                   </button>
