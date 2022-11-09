@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -11,6 +12,10 @@ const Header = () => {
     {
       name: "Services",
       href: "/services",
+    },
+    {
+      name: "Orders",
+      href: "/orders",
     },
     {
       name: "Blog",
@@ -42,6 +47,12 @@ const Header = () => {
               </Link>
             );
           })}
+          <div className="inline-block">
+            <span class="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">
+              0
+            </span>
+            <ShoppingCartIcon className="w-6"></ShoppingCartIcon>
+          </div>
         </nav>
         <div class="flex space-x-4 justify-center">
           <button
