@@ -7,7 +7,7 @@ const Header = () => {
   const navData = [
     {
       name: "Home",
-      href: "/home",
+      href: "/",
     },
     {
       name: "Services",
