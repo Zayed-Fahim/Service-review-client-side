@@ -38,34 +38,17 @@ const Banner = () => {
       <div className="carousel-inner relative w-full overflow-hidden">
         <div className="carousel-item active relative float-left w-full">
           <img src={img1} className="block w-full rounded-xl" alt="" />
-          <div className="carousel-caption hidden md:block absolute text-center">
-            <h5 className="text-xl">First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
         </div>
         <div className="carousel-item relative float-left w-full">
           <img src={img2} className="block w-full rounded-xl" alt="" />
-          <div className="carousel-caption hidden md:block absolute text-center">
-            <h5 className="text-xl">Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
         </div>
         <div className="carousel-item relative float-left w-full">
           <img src={img3} className="block w-full rounded-xl" alt="" />
-          <div className="carousel-caption hidden md:block absolute text-center">
-            <h5 className="text-xl">Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
         </div>
         <div className="carousel-item relative float-left w-full ">
           <img src={img4} className="block w-full rounded-xl" alt="" />
-          <div className="carousel-caption hidden md:block absolute text-center">
-            <h5 className="text-xl">Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
         </div>
       </div>
-
       <button
         className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
         type="button"

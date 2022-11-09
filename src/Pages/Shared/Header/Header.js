@@ -55,22 +55,26 @@ const Header = () => {
           </div>
         </nav>
         <div className="flex space-x-4 justify-center min-[0px]:hidden max-[767px]:hidden min-[768px]:inline-block">
-          <button
-            type="button"
-            className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
-          >
-            Sign In
-          </button>
-          <button
-            type="button"
-            className="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
-          >
-            Sign Up
-          </button>
+          <Link to="/login">
+            <button
+              type="button"
+              className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+            >
+              Sign In
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button
+              type="button"
+              className="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+            >
+              Sign Up
+            </button>
+          </Link>
         </div>
         <div className="md:hidden">
           {isModalOpen ? (
-            <div className="bg-[#2679df] fixed w-[55vw] right-0 top-0 h-[55vh] transition translate-x-[-1px] rounded-lg text-white">
+            <div className="bg-[#2679df] fixed w-[55vw] right-0 top-0 transition translate-x-[-1px] rounded-lg text-white">
               <div className="pt-5 pb-6 px-5">
                 <button
                   onClick={() => setModalOpen(!isModalOpen)}
@@ -108,18 +112,22 @@ const Header = () => {
                   </nav>
                 </div>
                 <div className="flex flex-col space-y-4 justify-center">
-                  <button
-                    type="button"
-                    className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
-                  >
-                    Sign In
-                  </button>
-                  <button
-                    type="button"
-                    className="inline-block py-3 mx-auto w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
-                  >
-                    Sign Up
-                  </button>
+                  <Link className="mx-auto" to="/login">
+                    <button
+                      type="button"
+                      className="inline-block mx-auto py-3 w-[120px] bg-blue-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+                    >
+                      Sign In
+                    </button>
+                  </Link>
+                  <Link className="mx-auto" to="/signup">
+                    <button
+                      type="button"
+                      className="inline-block py-3  w-[120px] text-center bg-purple-600 text-white font-medium text-[1.1rem] leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-100"
+                    >
+                      Sign Up
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
