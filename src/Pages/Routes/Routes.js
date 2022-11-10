@@ -7,6 +7,7 @@ import Home from "../Home/Home/Home";
 import FilteredServices from "../Home/Services/FilteredServices";
 import Services from "../Home/Services/Services";
 import Login from "../Login/Login";
+import Reviews from "../Reviews/Reviews";
 import ServicePage from "../ServicePage/ServicePage";
 import Signup from "../Signup/Signup";
 
@@ -38,6 +39,13 @@ const Routes = () => {
             return fetch(`http://localhost:5000/services/${params.id}`)
           },
           element:<ServicePage></ServicePage>
+        },
+        {
+          path: 'services/:id',
+          loader: ({ params }) => {
+            return fetch(`http://localhost:5000/services/${params.id}`);
+          },
+          element:<Reviews></Reviews>
         },
         {
           path: "/login",
