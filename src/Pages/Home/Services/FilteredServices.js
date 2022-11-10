@@ -12,7 +12,20 @@ const FilteredServices = () => {
     },[])
     return (
       <div>
-        <div className="flex container mx-auto justify-between mt-32 mb-20">
+        <div className="">
+          <h1 className="text-center text-2xl font-bold text-blue-700">
+            Services
+          </h1>
+          <h1 className="text-center text-5xl font-bold my-5">
+            My Service Area
+          </h1>
+          <p className="text-center">
+            The majority have suffered alteration in some form, by injected
+            humour, or randomized <br /> words which don't look even slightly
+            believable.
+          </p>
+        </div>
+        <div className="flex container mx-auto justify-between mt-12 mb-20">
           {filteredServices.map((filteredService) => (
             <FilteredService
               key={filteredService.service_id}

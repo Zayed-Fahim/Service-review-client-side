@@ -5,7 +5,7 @@ const Service = ({ service }) => {
   const { service_img, service_title, service_description, price, service_id } =
     service;
   return (
-    <div className="flex justify-center mt-12">
+    <div className="flex justify-center">
       <div className="rounded-lg shadow-lg bg-white max-w-sm">
         <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
           <img
