@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-
+import axios from 'axios';
+import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 const Reviews = () => {
+    const { logIn } = useContext(AuthContext);
     const reviews = useLoaderData();
     const [userReview, setUserReview] = useState('')
     const [reviewTrigger, setReviewTrigger] = useState(false)
     
     const { review, _id } = reviews;
 
+    
 
     const handleTextAreaTrigger = () => {
         setReviewTrigger(true);
         console.log(userReview);
-        //sending user review to db
-        
-        
+        // const url = ''
+        // const data = {}
+        // //sending user review to db
+        //      axios.post(url,data)  
 
 
 

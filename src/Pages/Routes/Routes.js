@@ -35,17 +35,21 @@ const Routes = () => {
         },
         {
           path: "/services/:id",
-          loader: ({params}) => {
-            return fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({ params }) => {
+            return fetch(
+              `https://service-review-server-plum.vercel.app/services/${params.id}`
+            );
           },
-          element:<ServicePage></ServicePage>
+          element: <ServicePage></ServicePage>,
         },
         {
-          path: 'services/:id',
+          path: "services/:id",
           loader: ({ params }) => {
-            return fetch(`http://localhost:5000/services/${params.id}`);
+            return fetch(
+              `https://service-review-server-plum.vercel.app/services/${params.id}`
+            );
           },
-          element:<Reviews></Reviews>
+          element: <Reviews></Reviews>,
         },
         {
           path: "/login",
