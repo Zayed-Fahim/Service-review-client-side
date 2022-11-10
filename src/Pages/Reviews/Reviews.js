@@ -1,38 +1,49 @@
 import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import axios from 'axios';
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+
 const Reviews = () => {
-    const { logIn } = useContext(AuthContext);
-    const reviews = useLoaderData();
-    const [userReview, setUserReview] = useState('')
-    const [reviewTrigger, setReviewTrigger] = useState(false)
-    
-    const { review, _id } = reviews;
+  const { user } = useContext(AuthContext);
+  const reviews = useLoaderData();
+  const [userReview, setUserReview] = useState("");
+  const [reviewTrigger, setReviewTrigger] = useState(false);
 
-    
-
-    const handleTextAreaTrigger = () => {
-        setReviewTrigger(true);
-        console.log(userReview);
-        // const url = ''
-        // const data = {}
-        // //sending user review to db
-        //      axios.post(url,data)  
+  const { review, _id } = reviews;
+  const urlID = _id;
 
 
-
-    }
-    
-    
-  const handleAddReview = (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const textArea = form.value;
-      setUserReview(textArea)
+  const handleTextAreaTrigger = () => {
+    setReviewTrigger(true);
+    const data = {
+      review: userReview,
+      serviceId: urlID,
+      reviewer_name: user.displayName,
+      reviewer_email: user.email
     };
-    
-    
+    console.log(data)
+    fetch("http://localhost:5000/services/service/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.acknowledged) {
+          alert("Review added successfully!!");
+        }
+
+      });
+  };
+
+  const handleAddReview = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const textArea = form.value;
+    setUserReview(textArea);
+  };
+
   return (
     <div className="flex flex-col">
       <div className="mb-3 xl:w-96">
@@ -71,9 +82,9 @@ const Reviews = () => {
       </div>
       <div>
         <button
-                  type="button"
-                  onClick={handleTextAreaTrigger}
-         className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          type="button"
+          onClick={handleTextAreaTrigger}
+          className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
         >
           POST
         </button>
