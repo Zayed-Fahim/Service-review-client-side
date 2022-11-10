@@ -4,6 +4,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import { FcClock, FcServices } from "react-icons/fc";
 import { BiDollar } from "react-icons/bi";
 import { GrMapLocation } from "react-icons/gr";
+import Reviews from "../Reviews/Reviews";
 
 const ServicePage = () => {
   const serviceDetails = useLoaderData();
@@ -50,7 +51,13 @@ const ServicePage = () => {
           <div className="flex">
             <div>
               {serviceDetails.facility.map((facility) => {
-                return <div className="mt-44 text-2xl font-semibold">{facility.details}</div>;
+                return (
+                  <div>
+                    <div className="mt-44 text-2xl font-semibold">
+                      {facility.details}
+                    </div>
+                  </div>
+                );
               })}
             </div>
             <div>
@@ -68,14 +75,19 @@ const ServicePage = () => {
               })}
             </div>
           </div>
-          <Link to="/services">
-            <button
-              type="button"
-              class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Back to Services
-            </button>
-          </Link>
+          <div className="flex justify-between items-center">
+            <div>
+              <Reviews></Reviews>
+            </div>
+            <Link to="/services">
+              <button
+                type="button"
+                class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              >
+                Back to Services
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
