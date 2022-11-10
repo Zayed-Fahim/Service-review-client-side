@@ -7,6 +7,7 @@ import Home from "../Home/Home/Home";
 import FilteredServices from "../Home/Services/FilteredServices";
 import Services from "../Home/Services/Services";
 import Login from "../Login/Login";
+import ServicePage from "../ServicePage/ServicePage";
 import Signup from "../Signup/Signup";
 
 const Routes = () => {
@@ -25,11 +26,18 @@ const Routes = () => {
         },
         {
           path: "/services",
-          element: <Services></Services>
+          element: <Services></Services>,
         },
         {
           path: "/services/filtered",
-          element: <FilteredServices></FilteredServices>
+          element: <FilteredServices></FilteredServices>,
+        },
+        {
+          path: "/services/:id",
+          loader: ({params}) => {
+            return fetch(`http://localhost:5000/services/${params.id}`)
+          },
+          element:<ServicePage></ServicePage>
         },
         {
           path: "/login",

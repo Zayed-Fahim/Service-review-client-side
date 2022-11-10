@@ -28,7 +28,7 @@ const FilteredServices = () => {
         <div className="flex container mx-auto justify-between mt-12 mb-20">
           {filteredServices.map((filteredService) => (
             <FilteredService
-              key={filteredService.service_id}
+              key={filteredService._id}
               filteredService={filteredService}
             ></FilteredService>
           ))}

@@ -19,7 +19,7 @@ const Services = () => {
             </div>
             <div className='grid grid-cols-3 container mx-auto'>
                 {
-                    services?.map(service => <Service key={service.service_id} service={service}></Service>)
+                    services?.map(service => <Service key={service._id} service={service}></Service>)
                 }
             </div>
         </div>
