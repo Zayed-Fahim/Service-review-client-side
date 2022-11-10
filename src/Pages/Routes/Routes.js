@@ -4,6 +4,7 @@ import Main from "../../Layout/Main/Main";
 import Blog from "../Blog/Blog/Blog";
 import About from "../Home/About/About";
 import Home from "../Home/Home/Home";
+import FilteredServices from "../Home/Services/FilteredServices";
 import Services from "../Home/Services/Services";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
@@ -24,7 +25,11 @@ const Routes = () => {
         },
         {
           path: "/services",
-          element: <Services></Services>,
+          element: <Services></Services>
+        },
+        {
+          path: "/services/filtered",
+          element: <FilteredServices></FilteredServices>
         },
         {
           path: "/login",
