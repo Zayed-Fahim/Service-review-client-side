@@ -7,6 +7,7 @@ import Home from "../Home/Home/Home";
 import FilteredServices from "../Home/Services/FilteredServices";
 import Services from "../Home/Services/Services";
 import Login from "../Login/Login";
+import Review from "../Review/Review";
 import Reviews from "../Reviews/Reviews";
 import ServicePage from "../ServicePage/ServicePage";
 import Signup from "../Signup/Signup";
@@ -50,6 +51,10 @@ const Routes = () => {
             );
           },
           element: <Reviews></Reviews>,
+        },
+        {
+          path: '/services/service/reviews/review',
+          element:<Review></Review>
         },
         {
           path: "/login",

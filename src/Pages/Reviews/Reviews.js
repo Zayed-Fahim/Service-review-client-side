@@ -18,22 +18,25 @@ const Reviews = () => {
       review: userReview,
       serviceId: urlID,
       reviewer_name: user.displayName,
-      reviewer_email: user.email
+      reviewer_email: user.email,
+      reviewer_photo : user.photoURL,
     };
     console.log(data)
-    fetch("http://localhost:5000/services/service/reviews", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      "https://service-review-server-zayed-fahim.vercel.app/services/service/reviews",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         if (result.acknowledged) {
           alert("Review added successfully!!");
         }
-
       });
   };
 
