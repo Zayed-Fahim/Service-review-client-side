@@ -8,7 +8,7 @@ import Reviews from "../Reviews/Reviews";
 
 const ServicePage = () => {
   const serviceDetails = useLoaderData();
-  const { service_img, service_title, service_description } = serviceDetails;
+  const { service_img, service_title } = serviceDetails;
   const facilities = [
     {
       id: 1,
